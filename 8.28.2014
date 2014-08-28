@@ -1,0 +1,5 @@
+http 
+	-application level protacal 
+	-statelss
+	-methods, error code, headers
+	-data is independent
