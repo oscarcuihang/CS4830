@@ -3,3 +3,7 @@ http
 	-statelss
 	-methods, error code, headers
 	-data is independent
+
+client - client model
+client		-------->(request)				web client
+user agent  (response)<-----------	 		origein server
