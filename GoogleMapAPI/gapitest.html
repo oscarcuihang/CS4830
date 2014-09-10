@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test MAP</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">     
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <style>
+      html, body, #map-canvas 
+      {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    
+   <!-- 
+    <script>
+      var map;
+      function initialize() {
+        var mapOptions = {
+          zoom: 18,
+          center: new google.maps.LatLng(38.9461112,-92.329945)
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+-->
+            <script>
+            var myCenter=new google.maps.LatLng(38.9461112,-92.329945);
+            var myCenter2=new google.maps.LatLng(38.9463876,-92.3308106);
+
+            function initialize()
+            {
+            var mapProp = {
+              center:myCenter,
+              zoom:18,
+              mapTypeId:google.maps.MapTypeId.ROADMAP
+              };
+
+            var map=new google.maps.Map(document.getElementById("map-canvas"),mapProp);
+
+            var marker=new google.maps.Marker({
+              position:myCenter,
+              });
+
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+              content:"Lafferre Hall map"
+              });
+
+            infowindow.open(map,marker);
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+            </head>
+
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
