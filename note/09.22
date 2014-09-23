@@ -1,0 +1,17 @@
+Data Interchange formats
+
+XML custom JSON
+XIZ health care, gov finnance, BSON
+SOAP 
+YAML -> human readable
+XAML
+
++         -
+        verbose
+        memory + procossing to parse power
+        
+JSON
++
+smaller easier to parse
+expressive/flexible
+-lack of defined standards
