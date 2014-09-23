@@ -21,13 +21,21 @@
       function initialize(location)
       {
         console.log(location);
-      
+        var current_location = new google.maps.LatLng(location.coords.latitude,location.coords.longitude);
+
         var mapOptions = {
           zoom: 20,
-          center: new google.maps.LatLng(location.coords.latitude,location.coords.longitude)
+          center: current_location,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+
         map = new google.maps.Map(document.getElementById('map_canvas'),
-            mapOptions); 
+            mapOptions);
+             
+        var marker = new google.maps.Marker({
+          position: current_location,
+          map:map
+        });
       }
 
       $(document).ready(function()
