@@ -16,22 +16,23 @@
       }
     </style>
 
-    <script tpye="text/javascript">
-     
+    <script>
+      var map;
       function initialize(location)
       {
         console.log(location);
-        var mapOptions = 
-              {
-            center: new google.maps.LatLng(location.coords.latitude, location.coords.longtitude),
-                zoom:18,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-              };    
-       var map = new google.maps.Map("map_canvas");
+      
+        var mapOptions = {
+          zoom: 20,
+          center: new google.maps.LatLng(location.coords.latitude,location.coords.longitude)
+        };
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions); 
       }
+
       $(document).ready(function()
       {
-        navigator.geolocation.getCurrentPosition(initialize)
+        navigator.geolocation.getCurrentPosition(initialize);
       });
     </script>
 
