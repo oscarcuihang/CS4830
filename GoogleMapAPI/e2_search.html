@@ -9,7 +9,7 @@
     <style type="text/css">
       html, body, #map_canvas 
       {
-        height: 100%;
+        height: 90%;
         width: 100%;
         margin: 0px;
         padding: 0px
@@ -29,7 +29,7 @@
             var marker = new google.maps.Marker({
             position: results[i].geometry.location,
             map: map
-            //icon: results[i].icon
+           
 
           });
         }
@@ -69,6 +69,22 @@
         //this ensure we wait unit the map bounds are initialised before we perform the search
         //perform_search();
         google.maps.event.addListener(map,'bounds_changed',perform_search);
+
+        $('#refresh').click(perform_search);
+
+        //traffic
+        traffic_layer = new google.maps.TrafficLayer();
+        $('#toggle_traffic').click(function(){
+          if (traffic_layer.getMap())
+          {
+            traffic_layer.setMap(null);
+          }
+          else
+          {
+            traffic_layer.setMap(map);
+          }
+          
+        });
       }
 
       $(document).ready(function()
@@ -80,5 +96,8 @@
   </head>
   <body>
     <div id="map_canvas"></div>
+    <button id = "refresh">Refresh</button>
+    <button id = "toggle_traffic">Traffic</button>
+    <button id = "toggle_weather">Weather</button>
   </body>
 </html>
