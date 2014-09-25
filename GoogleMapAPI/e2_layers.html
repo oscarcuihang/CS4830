@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E2 Assingment MAP</title>
+    <meta charset="utf-8">   
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,weather&sensor=false"></script>
+
+    <style type="text/css">
+      html, body, #map_canvas 
+      {
+        height: 90%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+
+    <script>
+      var map; 
+      
+
+      function initialize(location)
+      {
+        console.log(location);
+
+        var current_location = new google.maps.LatLng(location.coords.latitude,location.coords.longitude);
+
+        var mapOptions = {
+          zoom: 12,
+          center: current_location,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: current_location,
+          map: map
+        });
+
+        service = new google.maps.places.PlacesService(map);
+       
+       
+
+        //traffic
+        var traffic_layer = new google.maps.TrafficLayer();
+        $('#toggle_traffic').click(function(){
+          if (traffic_layer.getMap())
+          {
+            traffic_layer.setMap(null);
+          }
+          else
+          {
+            traffic_layer.setMap(map);
+          }
+          
+        });
+
+        //weather
+        var weatherLayer = new google.maps.weather.WeatherLayer({
+            temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
+          });
+        var cloudLayer = new google.maps.weather.CloudLayer();
+        $('#toggle_weather').click(function(){
+          if (weatherLayer.getMap() || cloudLayer.getMap())
+          {
+            weatherLayer.setMap(null);
+            cloudLayer.setMap(null);
+          }
+          else
+          {
+            weatherLayer.setMap(map);
+            cloudLayer.setMap(map);
+          }
+        });
+
+      }
+
+      $(document).ready(function()
+      {
+        navigator.geolocation.getCurrentPosition(initialize);
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+    <button id = "toggle_traffic">Traffic</button>
+    <button id = "toggle_weather">Weather</button>
+  </body>
+</html>
