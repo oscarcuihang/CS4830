@@ -5,3 +5,8 @@ fixed width layout
 	+designer user see same thing
 	-excessive white space
 	-low usability
+	
+fluid percentage
+	+layout seale
+	-but doesn't mean it looks nice (stretch)
+	-box model
