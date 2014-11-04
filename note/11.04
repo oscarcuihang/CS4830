@@ -17,3 +17,6 @@ URL
 	query string
 
 SESSIONS + cookies
+
+hidden form fields
+custom header
