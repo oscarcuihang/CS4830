@@ -1,0 +1,19 @@
+web application state
+
+both client + server
+	where are you? what are you accessing and how?
+	what have you done? - shopping cart
+						- predences
+						- logged in
+
+REST
+	http is stateless
+	client must propagate state
+	organization of server 	- clean endpoints
+							- http methods
+URL
+	fragment identifier #
+	history API
+	query string
+
+SESSIONS + cookies
