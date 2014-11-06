@@ -31,6 +31,7 @@ var map;
     draggable: true
   };
 
+
 function initialize() {
   directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
   var chicago = new google.maps.LatLng(41.850033, -87.6500523);
@@ -43,8 +44,8 @@ function initialize() {
 }
 
 function calcRoute() {
-  var start = document.getElementById('start_point').value;
-  var end = document.getElementById('end_point').value;
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
   var waypts = [];
   var checkboxArray = document.getElementById('waypoints');
   for (var i = 0; i < checkboxArray.length; i++) {
@@ -88,30 +89,26 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div id="map-canvas" style="float:left;width:70%;height:100%;"></div>
     <div id="control_panel" style="float:right;width:30%;text-align:left;padding-top:20px">
     <div style="margin:20px;border-width:2px;">
-    <b>Start:</b>
-    
-            <input id="start_point" type="textbox" value="">
-
+    <b>Start:</b><input id="start" type="textbox" value="Columbia, MO">
     <br>
-    <b>points:</b> <br>
+    <b>Waypoints:</b> <br>
     <i>(Ctrl-Click for multiple selection)</i> <br>
     <select multiple id="waypoints">
-      <option value="San Francisco, CA">Boston, MA</option>
-      <option value="New York, NY">New York, NY</option>
-      <option value="Miami, FL">Miami, FL</option>
-      <option value="Boston, MI">Boston, MI</option>
       <option value="St. Louis, MO">St. Louis, MO</option>
-      <option value="Chicago, IL">Chicago, IL</option>
-      <option value="Houston, TX">Houston, TX</option>
-      <option value="Los Angeles, LA">Los Angeles, LA</option>
-      <option value="Denver, CO">Denver, CO</option>
       <option value="Kansas City, MO">Kansas City, MO</option>
+      <option value="New York City, NY">New York City</option>
+      <option value="Seattle, WA">Seattle, WA</option>
+      <option value="Chicago, IL">Chicago, IL</option>
+      <option value="Miami, FL">Miami, FL</option>
+      <option value="Las Vegas, NV">Las Vegas, NV</option>
+      <option value="Los Angeles, LA">Los Angeles, LA</option>
+      <option value="San Fransesco, LA">San Fransesco, LA</option>
+      <option value=""></option>
     </select>
     <br>
-    <b>End:</b>
-   
-      <input id="end_point" type="textbox" value="">
+    <b>End:</b> <input id="end" type="textbox" value="">
 
+   
     <br>
       <input type="submit" onclick="calcRoute();">
     </div>
