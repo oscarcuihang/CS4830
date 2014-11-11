@@ -1,3 +1,15 @@
 Web security vulnerabilities
 SQL injection
 clinet + server issues
+phishing
+man in the middle
+http vs https
+session hijacking
+bufferoverf
+
+XSS ->exploits your trust in a site 
+XSRF -> exoloits a sitrs trust in you
+
+robots
+
+sanitize input
