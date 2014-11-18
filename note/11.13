@@ -1,0 +1,11 @@
+Goals
+————————————————————————————————
+
+1. XSS w/o account (reflected)
+2. XSS w/ account (stored)
+3. create an admin account
+4. hack into account  
+5. Hijack session
+6. Post on someone's behelf      -XSRF
+7. Delete on someone's behalf    -
+8. CREATE DEADLY VIRUS
