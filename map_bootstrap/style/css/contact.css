@@ -1,0 +1,130 @@
+#contact{
+	width: 100%;
+	min-width: 240px;
+	margin-top: 50px;
+	text-shadow: 1px 1px 1px #333;
+}
+
+#contact #a{
+	width: 80%;
+	max-width: 980px;
+	margin: 0 auto;
+
+	//padding: 25px 0 0 0;
+	//line-height: 22px;
+}
+	
+#contact #a p { 
+	margin: 0 0 20px 0; 
+}
+
+	
+#contact #a h1, #contact #a h2, #contact #a h3, #contact #a h4, #contact #a h5 
+{ 
+	margin: 0 0 20px 0; 
+	color: black; 
+	font-weight: normal; 
+	font-family: "Archivo Narrow", 
+	Arial, Helvetica, sans-serif; 
+}
+
+#contact #a h1 { 
+	font-size: 30px; 
+	line-height: 30px; 
+}
+
+#contact #a h2 { 
+	font-size: 26px; 
+	line-height: 30px; 
+	text-shadow: none;
+}
+
+#contact #a #portfoliocont ul
+{
+	list-style-type: none;
+	margin: 0 0 25px 0;
+}
+
+#contact #a ul { 
+	list-style-type: none;
+	margin: 3px 0 3px 0; 
+	
+}
+
+#contact #a ol li { 
+	padding: 0 0 0 2px; 
+}
+
+
+#contact #a hr { 
+	clear: both; 
+	border: 0; 
+	height: 0; 
+	margin: 0 0 20px 0; 
+	border-top: 1px solid #000; 
+	border-bottom: 1px solid #222; 
+}
+
+
+#back-top {
+	position: fixed;
+	bottom: 040px;
+	margin-left: 30px;
+}
+#back-top a {
+	width: 50px;
+	display: block;
+	/* background color transition */
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	transition: 0.5s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin-bottom: 5px;
+	background: url(../pic/top.png) no-repeat center center;
+	/* rounded corners */
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition:1s;
+    opacity: 0.2;
+}
+#back-top a:hover span {
+    opacity: 1;
+}
+
+
+#info{
+	font-size: 14px; 
+	text-shadow: none;
+}
+
+#label {
+	font-size: 14px; 
+	text-shadow: none;
+}
+
+#contact_box
+{
+	font-size:15px;
+}
+
+
+a
+{
+	color: #333;
+}
+a.hover
+{
+	color: lightblue;
+} 

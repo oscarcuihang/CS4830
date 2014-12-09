@@ -1,0 +1,152 @@
+#maincont{
+	width: 100%;
+	min-width: 240px;
+	//margin-top: 50px;
+	text-shadow: 1px 1px 1px #000;
+}
+
+#maincont #a{
+	width: 80%;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px 0 0 0;
+	line-height: 22px;
+}
+	
+#maincont #a p { 
+	margin: 0 0 20px 0; 
+}
+	
+#maincont #a h1, #maincont #a h2, #maincont #a h3, #maincont #a h4, #maincont #a h5 
+{ 
+	margin: 0 0 20px 0; 
+	color: black; 
+	font-weight: normal; 
+	font-family: "Archivo Narrow", 
+	Arial, Helvetica, sans-serif; 
+}
+#maincont #a h1 { 
+	font-size: 30px; 
+	line-height: 30px; 
+}
+
+#maincont #a h2 { 
+	font-size: 25px; 
+	line-height: 28px; 
+	text-shadow: none;
+}
+
+#maincont #a h3 { 
+	font-size: 26px; 
+	line-height: 26px; 
+}
+
+#maincont #a h4 { 
+	font-size: 24px; 
+	line-height: 24px; 
+}
+
+#maincont #a h5 { 
+	font-size: 22px; 
+	line-height: 22px; 
+}
+
+#maincont #a ul { 
+	margin: 0 0 15px 35px; 
+	list-style-type: square; 
+}
+
+#maincont #a ul li { 
+	padding: 0 0 0 2px; 
+}
+
+#maincont #a ol { 
+	margin: 0 0 15px 35px; 
+	list-style-type: decimal; 
+}
+
+#maincont #a ol li { 
+	padding: 0 0 0 2px; 
+}
+
+#maincont #a hr { 
+	clear: both; 
+	border: 0; 
+	height: 0; 
+	margin: 0 0 20px 0; 
+	border-top: 1px solid #000; 
+	border-bottom: 1px solid #222; 
+}
+
+#maincont #a blockquote { 
+	background: #151515; 
+	border-left: 3px solid #E2761C; 
+	padding: 15px; 
+	margin: 0 0 15px 0; }
+
+#maincont #a #portfoliocont ul
+{
+	list-style-type: none;
+	margin: 0 0 25px 0;
+}
+		
+#maincont #a #portfoliocont ul li
+{
+	display: block;
+	margin: 0 0 10px 0;
+}
+			
+#maincont #a #portfoliocont ul li a
+{
+	position: relative;
+	float: left;
+	width: 23%;
+	margin: 0 1% 15px 1%;
+}
+				
+#maincont #a #portfoliocont ul li a img
+{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#maincont #a #portfoliocont a .overlay
+{
+	position: absolute;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	top: 0;
+	width: 100%;
+	z-index: 40;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+#maincont #a #portfoliocont a .overlay.link
+{
+	background: url("/cuihang/image/need/overlay_link.png") no-repeat scroll center center, url("/cuihang/image/need/overlay_bg.png") repeat scroll center center transparent;
+	display: inline-block;
+}
+
+.album_name_text
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+}
+.album_state_text
+{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+
+
+
+#maincont #a #portfoliocont a .overlay:hover	
+{									
+	opacity: 1;
+}
